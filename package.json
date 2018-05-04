@@ -18,6 +18,12 @@
     "hexo-server": "^0.2.0"
   },
   "scripts":{
-    "serve":"hexo serve"
+    "s":"hexo serve",
+    "g":"hexo generate",
+    "p":"hexo publish",
+    "c":"hexo clean",
+    "new p":"hexo new page",
+    "d":"hexo deploy",
+    "n":"hexo new"
   }
 }
