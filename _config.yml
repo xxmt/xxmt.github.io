@@ -3,11 +3,11 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
-subtitle:
-description:
-keywords:
-author: John Doe
+title: the blog of xmt
+subtitle: 因为责任 所以马不停蹄
+description: 喜欢户外羽毛球毒瘾的web，小程序工程师
+keywords: web 前端 小程序 vue
+author: xmt
 language:
 timezone:
 
@@ -78,7 +78,7 @@ theme: spfk
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type:github
-  repository:https://github.com/xxmt/xxmt.github.io.git
-  branch:master
-  message:dfadfaf
+  type: git
+  repo: git@github.com:xxmt/xxmt.github.io.git
+  branch: master
+  message: 更新了
