@@ -14,7 +14,7 @@
 <meta property="og:description" content=".article{         margin:0;     }     .article-entry{         padding:0;     }     #container .left-col{         display:none;     }     #container .mid-col{        left:0;     }     #scroll{">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="http://www.xmtlmt.top/img/xmt.jpg">
-<meta property="og:updated_time" content="2018-06-08T15:32:14.151Z">
+<meta property="og:updated_time" content="2018-06-09T15:05:19.399Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="the blog of xmt">
 <meta name="twitter:description" content=".article{         margin:0;     }     .article-entry{         padding:0;     }     #container .left-col{         display:none;     }     #container .mid-col{        left:0;     }     #scroll{">
@@ -41,7 +41,7 @@
     <link href="/css/hover.css" rel="stylesheet" type="text/css" />
     <link href="/css/default.css" rel="stylesheet" type="text/css" />
   <!-- 加载jq -->
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="/js/jq.js"></script>
   <!-- 加载特效 -->
     <script src="/js/pace.js"></script>
     <script src="/js/easings.js"></script>
@@ -215,7 +215,6 @@
                     
                 </div>
             </nav>
-            <div class="tec-mobile" data-duration="1500"></div>
         </header>                
     </div>
 </nav>
@@ -510,19 +509,70 @@
 
     /*媒体转换*/
     @media screen and (max-width:800px) {
-       #fullpage,#fp-nav,.body-wrap,#footer{
+        html,body,#container{
+            width:100vw !important;
+            height:auto !important;
+            overflow:auto !important;
+        }
+        #container .header-author.fixed{
+            width:100vw;
+        }
+        body{
+            position:relative;
+            height:auto;
+        }
+        .info-other{
+            position:relative;
+            right:0;
+            top:0;
+            width:100%;
+        }
+        .info-other .info-item{
+            padding:0 20px;
+        }
+       #fullpage,#fp-nav,#footer{
            display:none;
        }
-        .body-wrap{
-            display:none;
-        }
         #container #mobile-nav,#header{
-            height:100vh
+            /*height:100vh*/
         }
         .tec-mobile{
             height:45vh;
             width:100%;
             background-color:#060606bd;
+        }
+        .project-mobile{
+            padding-top:45vh;
+        }
+       /* .project-mobile{
+            position:absolute;
+            left:0;
+            height:45vh;
+        }*/
+        .page-reward,.bdsharebuttonbox,#gitments{
+            display:none;
+        }
+        .m.mine-wrap{
+            flex-direction: column;
+            width:100%;
+            height:auto;
+            padding:10px 0;
+        }
+        .mine-wrap:before{
+            border-width:0;
+        }
+        .m p{
+            padding-left:15px;
+            width:100%;
+        }
+        .m-ft-shop{
+            color:#ccc;
+        }
+        .resume-mobile{
+            position:relative;
+        }
+        #container .mid-col{
+            position:relative;
         }
     }
 </style>
@@ -548,6 +598,9 @@
                     </div>
                     <div class="info-item mail">
                         <span>邮箱：</span><span>2889473891@qq.com</span>
+                    </div>
+                    <div class="info-item mail">
+                        <span>学历：</span><span>本科</span>
                     </div>
                 </div>
                 <div class="tec-stack" data-duration="1500"></div>
@@ -621,7 +674,7 @@
                             <p>b端（后台管理）采用了adminLTE、tp5进行前后端结合开发</p>
                             <p class="project-title">产品简介：</p>
                             <p>
-                                分图商城是一款分图科技自己团队研发的一款工具类的小程序，用户可以输入想要说的话然后进行相应主题海报的生成就可以保存或者分享，营造一种浪漫的气氛
+                                举牌告白小人是一款分图科技自己团队研发的一款工具类的小程序，用户可以输入想要说的话然后进行相应主题海报的生成就可以保存或者分享，营造一种浪漫的气氛
                             </p>
                         </div>
                     </div>
@@ -661,7 +714,7 @@
                             <p>b端（后台管理）采用了adminLTE、tp5进行前后端结合开发</p>
                             <p class="project-title">产品简介：</p>
                             <p>
-                                达题英雄是可以在限定的时间内答题，还会有领取复活卡的机会，达题全部成功会领取红包，只要有一题答错了就失败，在没有复活卡的情况下就会退出游戏
+                                达题英雄是一款分图科技自己团队研发的一款微信网站应用，可以在规定的时间内达题抢红包，还可以有一次的复活卡
                             </p>
                         </div>
                     </div>
@@ -678,7 +731,7 @@
                         <div class="project-con">
                             <p class="project-title">技术实现：</p>
                             <p>c端 采用h5、css3、jq、swiper、高德地图</p>
-                            <p>b端（后台管理）采用了adminLTE、tp5进行前后端结合开发</p>
+                            <p>b端（后台管理）采用了adminLTE、layer、tp5、fullcalendar、echarts进行前后端结合开发</p>
                             <p class="project-title">产品简介：</p>
                             <p>
                                vip红包是一款客户通过发红包打广告的微信网站应用，然后用户在这里领取到的红包有可以在分图钱包的小程序中进行提现,项目地址：http://redpacket.fentuapp.com.cn/jump.html?rid=d53f88dcc35413ca7b8d7710f15ceffd&type=2
@@ -699,6 +752,154 @@
         </div>
     </div>
     <!--<canvas class="fireworks"></canvas>-->
+</div>
+<div class="resume-mobile">
+    <div class="tec-mobile" data-duration="1500"></div>
+    <div class="project-mobile">
+        <div class="info-other">
+            <div class="info-item name">
+                <span>名字：</span><span>李明团</span>
+            </div>
+            <div class="info-item sex">
+                <span>性别：</span><span>男</span>
+            </div>
+            <div class="info-item mini-chat">
+                <span>微信：</span><span>lmt13828272341</span>
+            </div>
+            <div class="info-item birth">
+                <span>出生日期：</span><span>1995.10.05</span>
+            </div>
+            <div class="info-item mail">
+                <span>邮箱：</span><span>2889473891@qq.com</span>
+            </div>
+            <div class="info-item mail">
+                <span>学历：</span><span>本科</span>
+            </div>
+        </div>
+        <h3>项目经验</h3>
+        <div class="m-pro-item">
+            <div class="m-info">
+                <div class="mine-wrap m hvr-wobble-to-top-right">
+                    <p class="info-title">分图商城（小程序）</p>
+                    <div class="m-ft-shop">
+                        <p class="m-project-title">
+                            <span>技术实现：</span>
+                            <span>c端（小程序）采用wepy小程序框架</span>
+                            <span>b端（后台管理）采用了adminLTE、layer、tp5进行前后端结合开发</span>
+                        </p>
+                        <p class="m-project-title">
+                           <span>产品简介：</span>
+                            <span>
+                            分图商城是一款分图科技自己团队研发的一款小商城，用于销售分图科技商品，支持两种购买方式：现金+积分，现金。
+                            最后付款的时候还可以使用分图科技账户下的余额来支付
+                            </span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="m-pro-item">
+            <div class="m-info">
+                <div class="mine-wrap m hvr-wobble-to-top-right">
+                    <p class="info-title">分钟住（小程序）</p>
+                    <div class="m-ft-shop">
+                        <p class="m-project-title">
+                            <span>技术实现：</span>
+                            <span>c端（小程序）采用wepy小程序框架</span>
+                            <span>b端（后台管理）采用了adminLTE、layer、tp5进行前后端结合开发</span>
+                        </p>
+                        <p class="m-project-title">
+                           <span>产品简介：</span>
+                            <span>
+                            分钟住是一款分图科技自己团队研发的一款住店小程序，客户可以在上面进行分钟计费租赁住宿，有多种计费规则，完全从客户角度出发
+                            </span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="m-pro-item">
+            <div class="m-info">
+                <div class="mine-wrap m hvr-wobble-to-top-right">
+                    <p class="info-title">举牌告白小人（小程序）</p>
+                    <div class="m-ft-shop">
+                        <p class="m-project-title">
+                            <span>技术实现：</span>
+                            <span>c端（小程序）小程序原生这里重点使用了canvas</span>
+                            <span>b端（后台管理）采用了adminLTE、tp5进行前后端结合开发</span>
+                        </p>
+                        <p class="m-project-title">
+                            <span>产品简介：</span>
+                            <span>
+                            举牌告白小人是一款分图科技自己团队研发的一款工具类的小程序，用户可以输入想要说的话然后进行相应主题海报的生成就可以保存或者分享，营造一种浪漫的气氛
+                            </span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="m-pro-item">
+            <div class="m-info">
+                <div class="mine-wrap m hvr-wobble-to-top-right">
+                    <p class="info-title">分图钱包（小程序）</p>
+                    <div class="m-ft-shop">
+                        <p class="m-project-title">
+                            <span>技术实现：</span>
+                            <span>c端（小程序）小程序原生</span>
+                            <span>b端（后台管理）采用了adminLTE、tp5进行前后端结合开发</span>
+                        </p>
+                        <p class="m-project-title">
+                            <span>产品简介：</span>
+                            <span>
+                            分图钱包是一款分图科技自己团队研发的一款工具类的小程序，分图科技有着多种红包类的微信h5应用，里面用户抢到的红包可以在这个小程序进行体现氛
+                            </span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="m-pro-item">
+            <div class="m-info">
+                <div class="mine-wrap m hvr-wobble-to-top-right">
+                    <p class="info-title">达题英雄（网站应用）</p>
+                    <div class="m-ft-shop">
+                        <p class="m-project-title">
+                            <span>技术实现：</span>
+                            <span>c端github上的一款vue库的基础上进行开发</span>
+                            <span>b端（后台管理）采用了adminLTE、tp5进行前后端结合开发</span>
+                        </p>
+                        <p class="m-project-title">
+                            <span>产品简介：</span>
+                            <span>
+                            达题英雄是一款分图科技自己团队研发的一款微信网站应用，可以在规定的时间内达题抢红包，还可以有一次的复活卡
+                            </span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="m-pro-item">
+            <div class="m-info">
+                <div class="mine-wrap m hvr-wobble-to-top-right">
+                    <p class="info-title">VIP红包（网站应用）</p>
+                    <div class="m-ft-shop">
+                        <p class="m-project-title">
+                            <span>技术实现：</span>
+                            <span>c端 采用h5、css3、jq、swiper、高德地图</span>
+                            <span>b端（后台管理）采用了adminLTE、layer、tp5、fullcalendar、echarts进行前后端结合开发</span>
+                        </p>
+                        <p class="m-project-title">
+                            <span>产品简介：</span>
+                            <span>
+                            vip红包是一款客户通过发红包打广告的微信网站应用，然后用户在这里领取到的红包有可以在分图钱包的小程序中进行提现,
+                                项目地址：http://redpacket.fentuapp.com.cn/jump.html?rid=d53f88dcc35413ca7b8d7710f15ceffd&type=2
+                            </span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 <script>
     /*控制播放不同的音乐*/
@@ -948,7 +1149,6 @@
             }
         },
         afterLoad:function(anchorLink, index) {
-            console.log(index)
             let control = $(`.c${index}`)
             let music = $(`.m${index}`)[0]
             let screen = $('body').width()
@@ -1080,21 +1280,6 @@
 
 
 
-    
-        <div id="gitments"></div>
-<script src="/js/gitment.browser.js"></script>
-<script>
-    var gitment = new Gitment({
-      id: window.location.pathname,
-      owner: 'xmt',
-      repo: 'xmt.github.io',
-      oauth: {
-        client_id: '',
-        client_secret: '',
-      },
-    })
-    gitment.render('gitments')
-</script>
     
 
 
